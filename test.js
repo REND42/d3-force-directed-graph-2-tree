@@ -1,9 +1,10 @@
 // import './style.css'
 import * as d3 from 'd3'
-import data from './flare-2.json'
+import data2 from './flare-2.json'
+import data3 from './flare-3.json'
 
 
-const root = d3.hierarchy(data)
+const root = d3.hierarchy(data3)
 const links = root.links()
 const nodes = root.descendants()
 
@@ -36,7 +37,6 @@ const drag = simulation => {
       .on("drag", dragged)
       .on("end", dragended)
 }
-
 
 console.log(links, nodes)
 
@@ -79,7 +79,7 @@ simulation.on('tick', () => {
   .attr("x1", d => d.source.x)
   .attr("y1", d => d.source.y)
   .attr("x2", d => d.target.x)
-  .attr("y2", d => d.target.y);
+  .attr("y2", d => d.target.y)
 
   node
     .attr("cx", d => d.x)
