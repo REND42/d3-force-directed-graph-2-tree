@@ -1,0 +1,1836 @@
+[
+    {
+        "id": "1",
+        "source": "0",
+        "target": "2",
+        "type": "Own",
+        "properties": {}
+    },
+    {
+        "id": "0",
+        "source": "0",
+        "target": "1",
+        "type": "Own",
+        "properties": {}
+    },
+    {
+        "id": "181",
+        "source": "3",
+        "target": "99",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "16",
+        "source": "3",
+        "target": "17",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "15",
+        "source": "3",
+        "target": "16",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "14",
+        "source": "3",
+        "target": "15",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "13",
+        "source": "3",
+        "target": "14",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "2",
+        "source": "3",
+        "target": "1",
+        "type": "DOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "186",
+        "source": "4",
+        "target": "104",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "24",
+        "source": "4",
+        "target": "17",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "23",
+        "source": "4",
+        "target": "16",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "22",
+        "source": "4",
+        "target": "15",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "21",
+        "source": "4",
+        "target": "14",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "3",
+        "source": "4",
+        "target": "3",
+        "type": "SUBDOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "191",
+        "source": "5",
+        "target": "105",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "173",
+        "source": "5",
+        "target": "52",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "172",
+        "source": "5",
+        "target": "51",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "20",
+        "source": "5",
+        "target": "20",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "19",
+        "source": "5",
+        "target": "19",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "18",
+        "source": "5",
+        "target": "15",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "17",
+        "source": "5",
+        "target": "18",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "4",
+        "source": "5",
+        "target": "3",
+        "type": "SUBDOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "194",
+        "source": "6",
+        "target": "107",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "175",
+        "source": "6",
+        "target": "52",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "174",
+        "source": "6",
+        "target": "51",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "149",
+        "source": "6",
+        "target": "54",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "32",
+        "source": "6",
+        "target": "17",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "31",
+        "source": "6",
+        "target": "19",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "30",
+        "source": "6",
+        "target": "22",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "29",
+        "source": "6",
+        "target": "23",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "5",
+        "source": "6",
+        "target": "3",
+        "type": "SUBDOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "195",
+        "source": "7",
+        "target": "108",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "100",
+        "source": "7",
+        "target": "52",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "99",
+        "source": "7",
+        "target": "51",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "28",
+        "source": "7",
+        "target": "17",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "27",
+        "source": "7",
+        "target": "19",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "26",
+        "source": "7",
+        "target": "22",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "25",
+        "source": "7",
+        "target": "21",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "6",
+        "source": "7",
+        "target": "6",
+        "type": "SUBDOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "198",
+        "source": "8",
+        "target": "109",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "124",
+        "source": "8",
+        "target": "64",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "123",
+        "source": "8",
+        "target": "63",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "122",
+        "source": "8",
+        "target": "62",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "121",
+        "source": "8",
+        "target": "68",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "7",
+        "source": "8",
+        "target": "3",
+        "type": "SUBDOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "201",
+        "source": "9",
+        "target": "111",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "120",
+        "source": "9",
+        "target": "20",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "119",
+        "source": "9",
+        "target": "19",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "118",
+        "source": "9",
+        "target": "67",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "117",
+        "source": "9",
+        "target": "18",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "8",
+        "source": "9",
+        "target": "3",
+        "type": "SUBDOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "205",
+        "source": "10",
+        "target": "113",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "104",
+        "source": "10",
+        "target": "64",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "103",
+        "source": "10",
+        "target": "63",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "102",
+        "source": "10",
+        "target": "62",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "101",
+        "source": "10",
+        "target": "61",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "9",
+        "source": "10",
+        "target": "3",
+        "type": "SUBDOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "206",
+        "source": "11",
+        "target": "114",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "112",
+        "source": "11",
+        "target": "64",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "111",
+        "source": "11",
+        "target": "63",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "110",
+        "source": "11",
+        "target": "62",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "109",
+        "source": "11",
+        "target": "61",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "10",
+        "source": "11",
+        "target": "3",
+        "type": "SUBDOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "207",
+        "source": "12",
+        "target": "115",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "116",
+        "source": "12",
+        "target": "20",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "115",
+        "source": "12",
+        "target": "19",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "114",
+        "source": "12",
+        "target": "67",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "113",
+        "source": "12",
+        "target": "18",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "11",
+        "source": "12",
+        "target": "3",
+        "type": "SUBDOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "211",
+        "source": "13",
+        "target": "116",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "108",
+        "source": "13",
+        "target": "17",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "107",
+        "source": "13",
+        "target": "16",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "106",
+        "source": "13",
+        "target": "66",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "105",
+        "source": "13",
+        "target": "65",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "12",
+        "source": "13",
+        "target": "3",
+        "type": "SUBDOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "212",
+        "source": "24",
+        "target": "117",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "199",
+        "source": "24",
+        "target": "110",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "168",
+        "source": "24",
+        "target": "95",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "45",
+        "source": "24",
+        "target": "36",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "44",
+        "source": "24",
+        "target": "35",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "43",
+        "source": "24",
+        "target": "34",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "42",
+        "source": "24",
+        "target": "33",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "33",
+        "source": "24",
+        "target": "2",
+        "type": "DOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "220",
+        "source": "25",
+        "target": "121",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "200",
+        "source": "25",
+        "target": "110",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "169",
+        "source": "25",
+        "target": "95",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "53",
+        "source": "25",
+        "target": "36",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "52",
+        "source": "25",
+        "target": "35",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "51",
+        "source": "25",
+        "target": "34",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "50",
+        "source": "25",
+        "target": "33",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "34",
+        "source": "25",
+        "target": "24",
+        "type": "SUBDOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "261",
+        "source": "26",
+        "target": "139",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "260",
+        "source": "26",
+        "target": "142",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "254",
+        "source": "26",
+        "target": "136",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "228",
+        "source": "26",
+        "target": "122",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "178",
+        "source": "26",
+        "target": "97",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "177",
+        "source": "26",
+        "target": "92",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "176",
+        "source": "26",
+        "target": "96",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "171",
+        "source": "26",
+        "target": "62",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "167",
+        "source": "26",
+        "target": "94",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "166",
+        "source": "26",
+        "target": "93",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "161",
+        "source": "26",
+        "target": "78",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "157",
+        "source": "26",
+        "target": "72",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "152",
+        "source": "26",
+        "target": "34",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "151",
+        "source": "26",
+        "target": "90",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "148",
+        "source": "26",
+        "target": "88",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "147",
+        "source": "26",
+        "target": "87",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "146",
+        "source": "26",
+        "target": "86",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "145",
+        "source": "26",
+        "target": "82",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "144",
+        "source": "26",
+        "target": "85",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "139",
+        "source": "26",
+        "target": "80",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "136",
+        "source": "26",
+        "target": "79",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "134",
+        "source": "26",
+        "target": "77",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "133",
+        "source": "26",
+        "target": "76",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "125",
+        "source": "26",
+        "target": "69",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "98",
+        "source": "26",
+        "target": "46",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "97",
+        "source": "26",
+        "target": "45",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "96",
+        "source": "26",
+        "target": "60",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "95",
+        "source": "26",
+        "target": "59",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "69",
+        "source": "26",
+        "target": "43",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "68",
+        "source": "26",
+        "target": "42",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "67",
+        "source": "26",
+        "target": "41",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "66",
+        "source": "26",
+        "target": "40",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "35",
+        "source": "26",
+        "target": "24",
+        "type": "SUBDOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "257",
+        "source": "27",
+        "target": "139",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "256",
+        "source": "27",
+        "target": "138",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "255",
+        "source": "27",
+        "target": "137",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "253",
+        "source": "27",
+        "target": "34",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "252",
+        "source": "27",
+        "target": "135",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "229",
+        "source": "27",
+        "target": "123",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "180",
+        "source": "27",
+        "target": "75",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "179",
+        "source": "27",
+        "target": "98",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "170",
+        "source": "27",
+        "target": "42",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "159",
+        "source": "27",
+        "target": "92",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "158",
+        "source": "27",
+        "target": "91",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "150",
+        "source": "27",
+        "target": "89",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "141",
+        "source": "27",
+        "target": "82",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "140",
+        "source": "27",
+        "target": "81",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "138",
+        "source": "27",
+        "target": "49",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "137",
+        "source": "27",
+        "target": "48",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "130",
+        "source": "27",
+        "target": "43",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "129",
+        "source": "27",
+        "target": "73",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "128",
+        "source": "27",
+        "target": "72",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "127",
+        "source": "27",
+        "target": "71",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "90",
+        "source": "27",
+        "target": "56",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "89",
+        "source": "27",
+        "target": "55",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "73",
+        "source": "27",
+        "target": "46",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "72",
+        "source": "27",
+        "target": "45",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "71",
+        "source": "27",
+        "target": "41",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "70",
+        "source": "27",
+        "target": "44",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "36",
+        "source": "27",
+        "target": "24",
+        "type": "SUBDOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "259",
+        "source": "28",
+        "target": "141",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "258",
+        "source": "28",
+        "target": "140",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "237",
+        "source": "28",
+        "target": "129",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "160",
+        "source": "28",
+        "target": "42",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "156",
+        "source": "28",
+        "target": "43",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "155",
+        "source": "28",
+        "target": "73",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "154",
+        "source": "28",
+        "target": "72",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "153",
+        "source": "28",
+        "target": "77",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "143",
+        "source": "28",
+        "target": "84",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "142",
+        "source": "28",
+        "target": "83",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "135",
+        "source": "28",
+        "target": "78",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "132",
+        "source": "28",
+        "target": "75",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "131",
+        "source": "28",
+        "target": "74",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "126",
+        "source": "28",
+        "target": "70",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "94",
+        "source": "28",
+        "target": "46",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "93",
+        "source": "28",
+        "target": "45",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "92",
+        "source": "28",
+        "target": "58",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "91",
+        "source": "28",
+        "target": "57",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "77",
+        "source": "28",
+        "target": "49",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "76",
+        "source": "28",
+        "target": "48",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "75",
+        "source": "28",
+        "target": "41",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "74",
+        "source": "28",
+        "target": "47",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "37",
+        "source": "28",
+        "target": "24",
+        "type": "SUBDOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "238",
+        "source": "29",
+        "target": "130",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "163",
+        "source": "29",
+        "target": "54",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "49",
+        "source": "29",
+        "target": "38",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "48",
+        "source": "29",
+        "target": "19",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "47",
+        "source": "29",
+        "target": "22",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "46",
+        "source": "29",
+        "target": "37",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "38",
+        "source": "29",
+        "target": "24",
+        "type": "SUBDOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "239",
+        "source": "30",
+        "target": "131",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "165",
+        "source": "30",
+        "target": "54",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "82",
+        "source": "30",
+        "target": "52",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "81",
+        "source": "30",
+        "target": "51",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "57",
+        "source": "30",
+        "target": "17",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "56",
+        "source": "30",
+        "target": "19",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "55",
+        "source": "30",
+        "target": "22",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "54",
+        "source": "30",
+        "target": "39",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "39",
+        "source": "30",
+        "target": "24",
+        "type": "SUBDOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "243",
+        "source": "31",
+        "target": "132",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "162",
+        "source": "31",
+        "target": "54",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "84",
+        "source": "31",
+        "target": "52",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "83",
+        "source": "31",
+        "target": "51",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "65",
+        "source": "31",
+        "target": "17",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "64",
+        "source": "31",
+        "target": "19",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "63",
+        "source": "31",
+        "target": "22",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "62",
+        "source": "31",
+        "target": "39",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "40",
+        "source": "31",
+        "target": "30",
+        "type": "SUBDOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "247",
+        "source": "32",
+        "target": "133",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "164",
+        "source": "32",
+        "target": "54",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "80",
+        "source": "32",
+        "target": "52",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "79",
+        "source": "32",
+        "target": "51",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "61",
+        "source": "32",
+        "target": "17",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "60",
+        "source": "32",
+        "target": "19",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "59",
+        "source": "32",
+        "target": "22",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "58",
+        "source": "32",
+        "target": "39",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "41",
+        "source": "32",
+        "target": "30",
+        "type": "SUBDOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "251",
+        "source": "50",
+        "target": "134",
+        "type": "RUN",
+        "properties": {}
+    },
+    {
+        "id": "88",
+        "source": "50",
+        "target": "17",
+        "type": "ISP",
+        "properties": {}
+    },
+    {
+        "id": "87",
+        "source": "50",
+        "target": "19",
+        "type": "REGISTRATION",
+        "properties": {}
+    },
+    {
+        "id": "86",
+        "source": "50",
+        "target": "54",
+        "type": "REGION",
+        "properties": {}
+    },
+    {
+        "id": "85",
+        "source": "50",
+        "target": "53",
+        "type": "RESOLUTION_FROM",
+        "properties": {}
+    },
+    {
+        "id": "78",
+        "source": "50",
+        "target": "24",
+        "type": "SUBDOMAIN_FROM",
+        "properties": {}
+    },
+    {
+        "id": "221",
+        "source": "100",
+        "target": "121",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "213",
+        "source": "100",
+        "target": "117",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "187",
+        "source": "100",
+        "target": "104",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "182",
+        "source": "100",
+        "target": "99",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "248",
+        "source": "101",
+        "target": "133",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "244",
+        "source": "101",
+        "target": "132",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "240",
+        "source": "101",
+        "target": "131",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "232",
+        "source": "101",
+        "target": "123",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "223",
+        "source": "101",
+        "target": "121",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "215",
+        "source": "101",
+        "target": "117",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "188",
+        "source": "101",
+        "target": "104",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "183",
+        "source": "101",
+        "target": "99",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "225",
+        "source": "102",
+        "target": "121",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "217",
+        "source": "102",
+        "target": "117",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "189",
+        "source": "102",
+        "target": "104",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "184",
+        "source": "102",
+        "target": "99",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "250",
+        "source": "103",
+        "target": "133",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "246",
+        "source": "103",
+        "target": "132",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "242",
+        "source": "103",
+        "target": "131",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "236",
+        "source": "103",
+        "target": "123",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "227",
+        "source": "103",
+        "target": "121",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "219",
+        "source": "103",
+        "target": "117",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "210",
+        "source": "103",
+        "target": "115",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "204",
+        "source": "103",
+        "target": "111",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "197",
+        "source": "103",
+        "target": "108",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "193",
+        "source": "103",
+        "target": "105",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "190",
+        "source": "103",
+        "target": "104",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "185",
+        "source": "103",
+        "target": "99",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "249",
+        "source": "106",
+        "target": "133",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "245",
+        "source": "106",
+        "target": "132",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "241",
+        "source": "106",
+        "target": "131",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "208",
+        "source": "106",
+        "target": "115",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "202",
+        "source": "106",
+        "target": "111",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "196",
+        "source": "106",
+        "target": "108",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "192",
+        "source": "106",
+        "target": "105",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "209",
+        "source": "112",
+        "target": "115",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "203",
+        "source": "112",
+        "target": "111",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "222",
+        "source": "118",
+        "target": "121",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "214",
+        "source": "118",
+        "target": "117",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "224",
+        "source": "119",
+        "target": "121",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "216",
+        "source": "119",
+        "target": "117",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "226",
+        "source": "120",
+        "target": "121",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "218",
+        "source": "120",
+        "target": "117",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "230",
+        "source": "124",
+        "target": "123",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "231",
+        "source": "125",
+        "target": "123",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "233",
+        "source": "126",
+        "target": "123",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "234",
+        "source": "127",
+        "target": "123",
+        "type": "PROVIDE",
+        "properties": {}
+    },
+    {
+        "id": "235",
+        "source": "128",
+        "target": "123",
+        "type": "PROVIDE",
+        "properties": {}
+    }
+]
