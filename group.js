@@ -1,10 +1,8 @@
 import * as d3 from 'd3'
-import _ from 'lodash'
-import data from './data/miserables.json'
+import _, { forEach } from 'lodash'
 import nodes from './data/test_nodes.json'
 import links from './data/test_links.json'
-// import nodes from './data/ndoes.json'
-// import links from './data/links.json'
+
 const width = window.innerWidth
 const height = window.innerHeight
 
@@ -12,18 +10,14 @@ const cloneNodes = _.cloneDeep(nodes)
 const cloneLinks = _.cloneDeep(links)
 
 const groupList = _(cloneNodes).map('label').uniq().value()
-
-// console.log('clone', cloneNodes, cloneLinks, groupList)
+const expand = {  }
+let groups = {}
 
 let simulation = null
 let linkEle = null
 let nodeEle = null
 let hullEle = null
 let isTree = false
-
-const { groupNodes, groupLinks } = groupAll(nodes, links)
-
-console.log(111, groupNodes)
 
 const linkForce = d3.forceLink()
   .id(d => d.id)
@@ -53,11 +47,8 @@ const zoom = d3.zoom().scaleExtent([0.1, 8])
 
 
 function create(nodes, links) {
-  const groups = _(nodes).map('label').uniq().sort().value()
-  _.each(nodes, (n, i) => {
-    n.group = nodes[i].label
-  })
-  const nodeGroups = _.groupBy(nodes, 'group')
+  let groupKeys = Object.keys(groups)
+  console.log('init', groups, groupKeys)
 
   const svg = d3.select('svg').call(zoom)
   svg.attr('width', width).attr('height', height)
@@ -73,7 +64,7 @@ function create(nodes, links) {
   hullEle = svg.append('g')
     .attr('class', 'group hulls')
     .selectAll('path')
-    .data(groups)
+    .data(groupKeys)
     .enter()
     .append('path')
     .style('stroke', d => {
@@ -84,11 +75,13 @@ function create(nodes, links) {
     })
     .style('stroke-width', 30)
     .style('stroke-opacity', 0.5)
-    .style('fill-opacity', 0.5)
-    .attr('stroke-linejoin', 'round')
+    .style('fill-opacity', 0)
+    // .attr('stroke-linejoin', 'round')
     .on('click', (e, d) => {
       console.log('hull clicked', d)
-      collapseDataByOneLabel(nodes, links, d)
+      // collapseDataByOneLabel(nodes, links, d)
+      expand[d] = false
+      update()
     })
 
   linkEle = svg.append('g')
@@ -107,264 +100,186 @@ function create(nodes, links) {
     .enter().append('circle')
     .attr('r', d => 10)
     .attr('fill', d => {
-      return color(groupList.findIndex(g => d.label === g))
+      return color(groupList.findIndex(g => d.group === g))
     })
     .call(drag)
     .on('click', (e, d) => {
-      if(d.type === 'group') {
-        // console.log('expand it')
-        expandDataByOneLabel(nodes, links, d)
-      }
+      console.log('node clicked', d.group, expand)
+      expand[d.group] = !expand[d.group]
+      update()
     })
 
 
-    simulation.nodes(nodes).on('tick', () => {
-      if(isTree) {
-        nodeEle
-          .attr('cx', d => {
-            return d.x
-          })
-          .attr('cy', d => {
-            let level = groupNodes.findIndex(gn => gn.label === d.label)
-            return 120 * level + 40
-          })
-    
-        linkEle
-          .attr('x1', d => d.source.x)
-          .attr('x2', d => d.target.x)
-          .attr('y1', d => {
-            let level = groupNodes.findIndex(gn => gn.label === d.source.label)
-            return 120 * level + 40
-          })
-          .attr('y2', d => {
-            let level = groupNodes.findIndex(gn => gn.label === d.target.label)
-            return 120 * level + 40
-          })
-
-        hullEle.attr('d', g => {
-          let hullPoints = nodeGroups[g].map(n => {
-            let level = groupNodes.findIndex(gn => gn.label === n.label)
-            // return 120 * level + 40
-            return [n.x, 120 * level + 40]
-          })
-          const hullData = d3.polygonHull(hullPoints)
-          if(hullData === null) {
-            return
-          }
-          hullData.push(hullData[0])
-          return d3.line().curve(d3.curveCardinalClosed.tension(0.8))(hullData)
+  simulation.nodes(nodes).on('tick', () => {
+    if(isTree) {
+      nodeEle
+        .attr('cx', d => {
+          return d.x
         })
-      } else {
-        nodeEle
-        .attr('cx', d => d.x)
-        .attr('cy', d => d.y)
-
-        linkEle
-          .attr('x1', d => d.source.x)
-          .attr('y1', d => d.source.y)
-          .attr('x2', d => d.target.x)
-          .attr('y2', d => d.target.y)
-
-        hullEle.attr('d', g => {
-          let hullPoints = nodeGroups[g].map(n => {
-            return [n.x, n.y]
-          })
-          const hullData = d3.polygonHull(hullPoints)
-          if(hullData === null) {
-            return
-          }
-          hullData.push(hullData[0])
-          return d3.line().curve(d3.curveCardinalClosed.tension(0.8))(hullData)
+        .attr('cy', d => {
+          let level = groupList.findIndex(gn => gn === d.group)
+          return 120 * level + 40
         })
-      }
-    })
+  
+      linkEle
+        .attr('x1', d => d.source.x)
+        .attr('x2', d => d.target.x)
+        .attr('y1', d => {
+          let level = groupList.findIndex(gn => gn === d.source.group)
+          return 120 * level + 40
+        })
+        .attr('y2', d => {
+          let level = groupList.findIndex(gn => gn === d.target.group)
+          return 120 * level + 40
+        })
 
-    simulation.force('link').links(links)
+      hullEle.attr('d', g => {
+        let min = 10000, max = 0
+        let hullPoints = groups[g].map(n => {
+          let level = groupList.findIndex(gn => gn === n.label)
+          if(n.x < min) {
+            min = n.x
+          }
+          if(n.x > max) {
+            max = n.x
+          }
+          return [n.x, 120 * level + 40]
+        })
+
+        hullPoints.push([min-20, hullPoints[0][1]], [max+20, hullPoints[0][1]])
+        const hullData = d3.polygonHull(hullPoints)
+        if(hullData === null) {
+          return
+        }
+        hullData.push(hullData[0])
+        return d3.line().curve(d3.curveCardinal)(hullData)
+        // return d3.area().curve(d3.curveLinearClosed)(hullData)
+      })
+    } else {
+      nodeEle
+      .attr('cx', d => d.x)
+      .attr('cy', d => d.y)
+
+      linkEle
+        .attr('x1', d => d.source.x)
+        .attr('y1', d => d.source.y)
+        .attr('x2', d => d.target.x)
+        .attr('y2', d => d.target.y)
+
+      hullEle.attr('d', g => {
+        let hullPoints = groups[g].map(n => {
+          return [n.x, n.y]
+        })
+        const hullData = d3.polygonHull(hullPoints)
+        if(hullData === null) {
+          return
+        }
+        hullData.push(hullData[0])
+        return d3.line().curve(d3.curveCardinalClosed.tension(0.8))(hullData)
+      })
+    }
+  })
+
+  simulation.force('link').links(links)
 }
 
 function color(d) {
   return d3.schemePaired[d]
 }
 
-function update(nodes, links) {
-
+function update() {
   d3.select('svg').selectAll('.group').remove()
-  create(nodes, links)
+  let { nodes: new_nodes, links: new_links } =  groupAll({nodes: cloneNodes, links: cloneLinks})
+  create(new_nodes, new_links)
 }
 
-function collapseDataByOneLabel(nodes, links, curLabel) {
-  console.log(nodes, links, curLabel)
+function groupAll(originData) {
+  const cloneOriginNodes = _.cloneDeep(originData.nodes)
+  const cloneOriginLinks = _.cloneDeep(originData.links)
 
-  let newLinks = []
-  let newNodes = []
-  nodes.forEach(node => {
-    if(node.label !== curLabel) {
-      newNodes.push(node)
-    }
-  })
-  let foundNode = groupNodes.find(gn => gn.label === curLabel)
-  newNodes.push(foundNode)
+  let nodes = [], links = []
+  const getGroup = (node) => { return node.label}
+  groups = {}
 
-  links.forEach(link => {
-    if(link.target.label !== curLabel && link.source.label !== curLabel) {
-      newLinks.push(link)
-    }
-  })
-  let foundLink = groupLinks.find(gl => gl.target_label === curLabel || gl.source_label === curLabel)
-  newLinks.push(foundLink)
-  update(newNodes, newLinks)
-}
-
-
-function expandDataByOneLabel(nodes, links, curNode) {
-  console.log(nodes, links, curNode)
-  // let nodesCopy = _.cloneDeep(nodes)
-  // let linksCopy = _.cloneDeep(links)
-
-  let newNodes = []
-  let newLinks = []
-  nodes.forEach(node => {
-    if(node.group !== curNode.label) {
-      newNodes.push(node)
-    }
-  })
-  newNodes.push(...curNode.node_list)
-  links.forEach(link => {
-    // let tNode = nodes.find(n => n.id === n.target)
-    console.log(23333, link)
-    if(link.group_source_id && link.group_target_id && link.group_source_id !== curNode.id && link.group_target_id !== curNode.id) {
-      newLinks.push(link)
-    }
-  })
-
-  curNode.node_list.forEach(node => {
-    node.as_source_links.forEach(link => {
-      let brandNewLink = cloneLinks.find(l => l.id === link.id)
-      if(nodes.findIndex(gn => gn.id === link.group_target_id) !== -1) {
-        brandNewLink.target = link.group_target_id
-        newLinks.push(brandNewLink)
-      }
-    })
-
-    node.as_target_links.forEach(link => {
-      let brandNewLink = cloneLinks.find(l => l.id === link.id)
-      if(nodes.findIndex(gn => gn.id === link.group_source_id) !== -1) {
-        brandNewLink.source = link.group_source_id
-        newLinks.push(brandNewLink)
-      }
-    })
-  })
-  console.log('new', newNodes, newLinks)
-  update(newNodes, newLinks)
-}
-
-// function groupDataByOneLabel(label) {
-//   let groupObj = {
-//     type: 'group',
-//     label: label,
-//     total: 0
-//   }
-//   let groupNodeIdList = []
-//   nodes.forEach(n => {
-//     if(n.label === label) {
-//       if(groupObj.total === 0) {
-//         groupObj.id = n.id
-//       }
-//       groupObj.total++
-//       groupNodeIdList.push(n.id)
-//     }
-//   })
-
-//   let groupNodes = [groupObj, ...filterNodes(groupNodeIdList)]
-//   let groupLinks = [...filterLinks(groupNodeIdList)]
-
-//   update(groupNodes, groupLinks)
-//   // return { nodes: groupNodes, links: groupLinks }
-// }
-
-function filterNodes(idList) {
-  return cloneNodes.filter( n => !idList.includes(n.id))
-}
-
-function filterLinks(idList) {
-  return cloneLinks.filter((link) => {
-    return (
-      !idList.includes(link.target) &&
-      !idList.includes(link.source)
-    )
-  })
-}
-
-function groupAll(nodes, links) {
-  let groupNodes = []
-  let groupLinks = []
-  groupList.forEach(group => {
-    let groupObj = {
-      total: 0,
-      type: 'group',
-      label: group,
+  for(let i=0; i<cloneOriginNodes.length; i++) {
+    let n = cloneOriginNodes[i], group = getGroup(n)
+    n.group = group
+    let groupNode = {
+      group: group,
+      id: `g_${i}`,
       node_list: []
     }
-    nodes.forEach(n => {
-      if(n.label === group) {
-        n.as_source_links = links.filter(link => link.source === n.id)
-        n.as_target_links = links.filter(link => link.target === n.id)
+    if(expand[group]) {
+      nodes.push(n)
+      if(!groups[group]) {
+        groups[group] = [n]
+      } else {
+        groups[group].push(n)
+      }
+    } else {
+      let existGroup = nodes.find(n => n.group === group)
+      if(!existGroup) {
+        groupNode.node_list.push(n.id)
+        nodes.push(groupNode)
+      } else {
+        existGroup.node_list.push(n.id)
+      }
+    }
+  }
 
-        if(groupObj.total === 0) {
-          groupObj.id = `g_${n.id}`
-          groupObj.origin_id = n.id
+  for(let k=0; k<cloneOriginLinks.length; k++) {
+    let l = cloneOriginLinks[k]
+    let targetNode = cloneOriginNodes.find(n => n.id === l.target)
+    let sourceNode = cloneOriginNodes.find(n => n.id === l.source)
+    if(expand[targetNode.group]) {
+      if(expand[sourceNode.group]) {
+        links.push(l)
+      } else {
+        let groupNode = nodes.find(n => n.group === sourceNode.group)
+        let groupLink = {
+          id: `g_${l.id}`,
+          target: targetNode.id,
+          source: groupNode.id,
+          type: l.type
         }
-        groupObj.total++
-        groupObj.node_list.push(n)
+        links.push(groupLink)
       }
-    })
-    groupNodes.push(groupObj)
-  })
+    } else if(expand[sourceNode.group]) {
+      if(expand[targetNode.group]) {
+        links.push(l)
+      } else {
+        let groupNode = nodes.find(n => n.group === targetNode.group)
+        let groupLink = {
+          id: `g_${l.id}`,
+          target: groupNode.id,
+          source: sourceNode.id,
+          type: l.type
+        }
+        links.push(groupLink)
+      }
+    } else {
+      let targetGroupNode = nodes.find(node => node.node_list && node.node_list.includes(l.target))
+      let sourceGroupNode = nodes.find(node => node.node_list && node.node_list.includes(l.source))
 
-  const allLinks = []
-  nodes.forEach(n => {
-    let sourceLinks = links.filter(link => {
-      link.origin_source_id = link.source
-      link.origin_target_id = link.target
-      if(link.source === n.id) {
-        link.source_label = n.label
-        return true
+      if(targetGroupNode && sourceGroupNode) {
+        let groupLink = {
+          id: `g_${l.id}`,
+          target: targetGroupNode.id,
+          source: sourceGroupNode.id,
+          type: l.type
+        }
+        // fixed
+        if(!links.find(link => link.target === groupLink.target && link.source === groupLink.source )) {
+          links.push(groupLink)
+        }
       }
-    })
-    let targetLinks = links.filter(link => {
-      if(link.target === n.id) {
-        link.target_label = n.label
-        return true
-      }
-    })
-    allLinks.push(...sourceLinks, ...targetLinks)
-  })
-
-  allLinks.forEach(link => {
-    let targetNode = groupNodes.find(gn => gn.label === link.target_label)
-    let sourceNode = groupNodes.find(gn => gn.label === link.source_label)
-    if(targetNode && sourceNode) {
-      link.group_source_id = sourceNode.id
-      link.group_target_id = targetNode.id
-      link.source = sourceNode.id
-      link.target = targetNode.id
     }
-    if(groupLinks.findIndex(gl => (gl.source === link.source && gl.target === link.target)) === -1) {
-      groupLinks.push(link)
-    }
-  })
-
-  // console.log(24444, groupNodes, groupLinks)
-
-  return { groupNodes, groupLinks }
-  // create(groupNodes, groupLinks)
+  }
+  return {nodes, links}
 }
 
-create(groupNodes, groupLinks)
-
-
-
-// create(nodes, links)
+let { nodes: new_nodes, links: new_links } =  groupAll({nodes, links})
+create(new_nodes, new_links)
 
 document.getElementById('btn').addEventListener('click', () => {
   console.log('switch')
